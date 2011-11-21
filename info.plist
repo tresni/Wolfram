@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>action</key>
+	<false/>
+	<key>category</key>
+	<string>SCRIPTS</string>
+	<key>command</key>
+	<string>#Desc:	Queries Wolfram Alpha
+#Use:	w &lt;query&gt;
+#Ex:	w land speed record
+
+RESULT=$(php -f wolfram.php -- "{query}");
+echo $RESULT | pbcopy
+echo $RESULT;</string>
+	<key>escapequery</key>
+	<false/>
+	<key>escapequerybackquotes</key>
+	<false/>
+	<key>escapequerybrackets</key>
+	<false/>
+	<key>escapequeryquotes</key>
+	<false/>
+	<key>escapequerysemicolons</key>
+	<false/>
+	<key>growloutput</key>
+	<true/>
+	<key>growloutputsticky</key>
+	<true/>
+	<key>keyword</key>
+	<string>w</string>
+	<key>logging</key>
+	<false/>
+	<key>silent</key>
+	<true/>
+	<key>subtitle</key>
+	<string>Search Wolfram|Alpha</string>
+	<key>title</key>
+	<string>Search Wolfram|Alpha</string>
+</dict>
+</plist>
