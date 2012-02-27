@@ -43,6 +43,17 @@
 	
 	//Return result
 	if ($def->pod[1]->subpod->plaintext)
-	{ echo $def->pod[1]->subpod->plaintext; }
-	else
-	{ echo "Unable to find suitable results"; }
+	{
+		echo $def->pod[1]->subpod->plaintext;
+	}
+	else {
+		$attributes = $def->attributes();
+		if ($attributes->error == "true")
+		{
+			echo "Wolfram error: {$def->error->msg}";
+		}
+		else
+		{
+			echo "Unable to find suitable results";
+		}
+	}
